@@ -12,7 +12,7 @@ namespace GenericsIntro
         {
             items = new T[0];
         }
-        public void Add(T item) //item - eleman, T de string gibi tür
+        public void Add(T item) //item - eleman, T de string gibi tip (type)
         {
             T[] tempArray = items; //geçici dizi
             items = new T[items.Length + 1];
@@ -22,6 +22,16 @@ namespace GenericsIntro
             }
 
             items[items.Length - 1] = item;
+        }
+
+        public int Length
+        {
+            get { return items.Length; }
+        }
+
+        public T[] Items
+        {
+            get { return items; }
         }
     }
 }
